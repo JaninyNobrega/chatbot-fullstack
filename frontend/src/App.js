@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
+
+import UserSelector from "./UserSelector";
+import Chat from "./Chat";
+import Historico from "./Historico";
 
 function App() {
+  const [activeUser, setActiveUser] = useState("A");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="p-6 max-w-2xl mx-auto">
+        <UserSelector activeUser={activeUser} setActiveUser={setActiveUser} />
+
+        <nav className="flex gap-4 mt-4">
+          <Link className="text-primary underline" to="/">Chat</Link>
+          <Link className="text-primary underline" to="/historico">Histórico</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Chat activeUser={activeUser} />} />
+          <Route path="/historico" element={<Historico activeUser={activeUser} />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
