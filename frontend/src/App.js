@@ -10,10 +10,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="p-6 max-w-2xl mx-auto">
+      <div className="p-4 sm:p-6 max-w-xl mx-auto">
         <UserSelector activeUser={activeUser} setActiveUser={setActiveUser} />
 
-        <nav className="flex gap-4 mt-4">
+        <nav className="flex gap-4 mt-4 text-sm sm:text-base justify-center">
           <Link className="text-primary underline" to="/">Chat</Link>
           <Link className="text-primary underline" to="/historico">Histórico</Link>
         </nav>
