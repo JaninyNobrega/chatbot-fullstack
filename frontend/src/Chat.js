@@ -5,7 +5,7 @@ export default function Chat({ activeUser }) {
   const [text, setText] = useState("");
 
   const sendMessage = async () => {
-    const res = await fetch("http://localhost:8000/api/send/", {
+    const res = await fetch("http://127.0.0.1:8000/api/send/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user: activeUser, text })

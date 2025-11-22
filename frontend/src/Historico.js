@@ -4,7 +4,7 @@ export default function Historico({ activeUser }) {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/history/${activeUser}/`)
+    fetch(`http://127.0.0.1:8000/api/history/${activeUser}/`)
       .then((r) => r.json())
       .then(setHistory);
   }, [activeUser]);
