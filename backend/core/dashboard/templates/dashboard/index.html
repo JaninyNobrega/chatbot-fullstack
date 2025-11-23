@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Administrativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-blue-50 min-h-screen p-6">
+
+    <h1 class="text-3xl font-bold text-blue-900 mb-6">
+        Dashboard Administrativo
+    </h1>
+
+    <div class="bg-white shadow-md rounded-2xl p-6 mb-6">
+        <h2 class="text-xl font-semibold text-blue-900 mb-2">
+            Total de Mensagens
+        </h2>
+
+        <p class="text-4xl font-bold text-blue-600">
+            {{ total_messages }}
+        </p>
+    </div>
+    
+    <div class="bg-white shadow-md rounded-2xl p-6">
+        <h2 class="text-xl font-semibold text-blue-900 mb-4">
+            Mensagens por Usuário
+        </h2>
+
+        <canvas id="messagesChart" height="120"></canvas>
+
+        <script>
+            const ctx = document.getElementById('messagesChart');
+
+            const labels = [
+                {% for item in messages_per_user %}
+                    "{{ item.user }}",
+                {% endfor %}
+            ];
+
+            const data = [
+                {% for item in messages_per_user %}
+                    {{ item.total }},
+                {% endfor %}
+            ];
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Total de Mensagens',
+                        data: data,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+    </div>
+
+</body>
+</html>
