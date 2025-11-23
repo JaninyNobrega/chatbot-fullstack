@@ -46,6 +46,9 @@ INSTALLED_APPS = [
 
     # CORS (se você tiver instalado)
     'corsheaders',
+    
+    # Django Import Export
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +82,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "core" / "static"
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases

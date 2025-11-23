@@ -1,0 +1,25 @@
+/* esccolher tema claro/escuro */
+
+#header {
+  background: linear-gradient(90deg, #0d6efd, #6610f2) !important;
+  color: white !important;
+}
+
+#header a {
+  color: white !important;
+}
+
+
+table#result_list tbody tr:hover {
+  background: #eef6ff !important;
+}
+
+.button, input[type=submit] {
+  border-radius: 8px !important;
+  padding: 8px 14px !important;
+}
+
+
+body, td, th {
+  font-family: "Inter", sans-serif !important;
+}
