@@ -46,73 +46,78 @@ O objetivo é demonstrar experiência com **Django + Django REST Framework (back
         index.js
     package.json
 
+---
+
 # ⚙️ Como rodar o projeto localmente
 
-## 🟦 1. Clonar o repositório
+#### 🟦 1. Clonar o repositório
 
 git clone https://github.com/JaninyNobrega/chatbot-fullstack.git
 cd chatbot-fullstack
 
-#   🟦 Backend (Django)
-## 2. Criar ambiente virtual
+###   🟦 Backend (Django)
+#### 2. Criar ambiente virtual
 cd backend
 python -m venv venv
 
-## 3. Ativar ambiente virtual
+#### 3. Ativar ambiente virtual
 Windows:
 cd backend
 python -m venv venv
 Mac/Linux:
 source venv/bin/activate
 
-## 4. Instalar dependências
+#### 4. Instalar dependências
 pip install -r requirements.txt
 
-## 5. Rodar migrações
+#### 5. Rodar migrações
 python manage.py migrate
 
-## 6. Rodar o servidor
+#### 6. Rodar o servidor
 python manage.py runserver
 
+---
 #   🔐 Acesso ao admin
 
-## Credenciais incluídas apenas para o avaliador:
-
+#### Credenciais incluídas apenas para o avaliador:
 Usuário: janinynobrega@gmail.com
 Senha: testetecnico
 
-## Painel:
+#### Painel:
 http://127.0.0.1:8000/admin/
 
-## Dashboard
+#### Dashboard
 http://127.0.0.1:8000/admin/dashboard/
 
-## Home
+#### Home
 http://127.0.0.1:8000/
 
-#   🟦 Frontend (React)
+---
+###   🟦 Frontend (React)
 
-## 1. Instalar dependências
+#### 1. Instalar dependências
 cd ../frontend
 npm install
 
-## 2. Rodar o frontend
+#### 2. Rodar o frontend
 npm start
 
+---
 #   🧠 Decisões Técnicas
-### 📌 Modelagem (Django)
+#### 📌 Modelagem (Django)
 
  O model Message contém:
 
-📋 user → identifica o usuário da conversa
-📋 text → mensagem enviada
-📋 response → resposta automática
-📋 created_at → data/hora
-📋 A modelagem foi mantida simples para refletir apenas o necessário para o desafio. Optei por armazenar como CharField para permitir usuários dinâmicos sem necessidade de tabela separada.
+📋 user → identifica o usuário da conversa  
+📋 text → mensagem enviada  
+📋 response → resposta automática   
+📋 created_at → data/hora   
+📋 A modelagem foi mantida simples para refletir apenas o necessário para o desafio. Optei por armazenar como CharField para permitir usuários dinâmicos sem necessidade de tabela separada.    
 
+---
 #   📌 Lógica da API
 
-### O endpoint /api/send/:
+#### O endpoint /api/send/:
 
 ✔ Recebe o usuário e a mensagem
 ✔ Gera resposta personalizada por usuário
@@ -122,37 +127,38 @@ npm start
 ✔ Filtra mensagens por usuário
 ✔ Retorna ordem cronológica inversa
 
-#   📌 Frontend (React)
+###   📌 Frontend (React)
 
-### Gerenciamento de estado:
+#### Gerenciamento de estado:
 
-✔ useState → guarda mensagens no chat
-✔ useEffect → carrega histórico ao trocar usuário
-✔ activeUser controla qual usuário está usando o chatbot
+✔ useState → guarda mensagens no chat  
+✔ useEffect → carrega histórico ao trocar usuário  
+✔ activeUser controla qual usuário está usando o chatbot   
 
-## Navegação:
+#### Navegação:
 
-✏️ React Router DOM para rotas:
-✔  / → Chat
-✔  /historico → Histórico do usuário
+✏️ React Router DOM para rotas: 
+✔  / → Chat    
+✔  /historico → Histórico do usuário   
 
-## Estilização:
+#### Estilização:
 
-✔ Tailwind CSS para design moderno, limpo e responsivo
-✔ Tema baseado em tons de azul, conforme sua preferência
+✔ Tailwind CSS para design moderno, limpo e responsivo 
+✔ Tema baseado em tons de azul, conforme sua preferência   
 
+---
 #   ✔️ Tecnologias Utilizadas
 
-🔸Python 3
-🔸Django
-🔸Django REST Framework
-🔸SQLite (ambiente local)
-🔸React
-🔸Tailwind CSS
-🔸Chart.js
-🔸Fetch API
+🔸Python 3  
+🔸Django    
+🔸Django REST Framework 
+🔸SQLite (ambiente local)   
+🔸React 
+🔸Tailwind CSS  
+🔸Chart.js  
+🔸Fetch API 
 
-#   👩‍💻 Autora
-
-### Janiny Nóbrega
+---
+##   👩‍💻 Autora
+#### Janiny Nóbrega 
 Projeto desenvolvido como parte do processo seletivo da 4blue.
