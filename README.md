@@ -30,6 +30,7 @@ Uma aplicação completa de chatbot com respostas personalizadas por usuário (A
 - Python 3.9+
 - Node.js 18+
 - Git
+- Django 5.2+ (ou instale via pip)
 
 #### 1. Clone o repositório
 git clone https://github.com/JaninyNobrega/chatbot-fullstack.git        
@@ -45,8 +46,17 @@ python -m venv venv
 source venv/bin/activate
 
 #### Instalar dependências
-pip install -r requirements.txt     
-pip install djangorestframework
+- Se houver `requirements.txt`, prefira instalar com:
+
+```powershell
+pip install -r requirements.txt
+```
+
+- Caso não exista, instale manualmente as dependências principais:
+
+```powershell
+pip install django==5.2.8 djangorestframework django-cors-headers django-import-export
+```
 
 #### Aplicar migrações
 python manage.py migrate
