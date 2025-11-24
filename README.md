@@ -33,9 +33,9 @@ Uma aplicação completa de chatbot com respostas personalizadas por usuário (A
 
 #### 1. Clone o repositório
 git clone https://github.com/JaninyNobrega/chatbot-fullstack.git        
-cd chatbot-fullstack
-
-cd backend
+acesse a pasta do backend       
+\cd chatbot-fullstack        
+\cd backend      
 
 #### Criar e ativar ambiente virtual
 python -m venv venv
@@ -55,7 +55,8 @@ python manage.py runserver
 ### → http://127.0.0.1:8000
 
 ### Em outro terminal
-cd ../frontend
+acesse a pasta do frontend      
+\cd frontend
 
 npm install
 npm start
@@ -67,7 +68,6 @@ npm start
 | --- | --- | --- |
 | Admin Django | `http://127.0.0.1:8000/admin/` | `janinynobrega@gmail.com` |
 | Dashboard | `http://127.0.0.1:8000/admin/dashboard/` | `Senha: testetecnico` |
-| API | `http://127.0.0.1:8000/api/` | — |
 
 ## 🛠 Decisões Técnicas
 
@@ -76,8 +76,8 @@ Exemplo do modelo principal usado no projeto:
 ```python
 class Message(models.Model):
     user = models.CharField(max_length=1)  # A, B ou C
-    text = models.TextField()
-    response = models.TextField()
+    text = models.TextField()  # Mensagem do usuário
+    response = models.TextField() # Resposta do bot
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -94,7 +94,7 @@ class Message(models.Model):
 ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chart.js&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
-## 👩‍💻 Autora
+## 👩‍💻 Desenvolvedor
 
 Janiny Nóbrega  
-Projeto desenvolvido com carinho como parte do processo seletivo da 4blue 💙
+Projeto desenvolvido como parte do processo seletivo da 4blue.
