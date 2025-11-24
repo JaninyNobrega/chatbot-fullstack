@@ -32,45 +32,44 @@ Uma aplicação completa de chatbot com respostas personalizadas por usuário (A
 - Node.js 18+
 - Git
 
-```bash
-# 1. Clone o repositório
+#### 1. Clone o repositório
 git clone https://github.com/JaninyNobrega/chatbot-fullstack.git
 cd chatbot-fullstack
 
 cd backend
 
-# Criar e ativar ambiente virtual
+#### Criar e ativar ambiente virtual
 python -m venv venv
-# Windows
+#### Windows
 .\venv\Scripts\activate
-# Mac/Linux
+#### Mac/Linux
 source venv/bin/activate
 
-# Instalar dependências
+#### Instalar dependências
 pip install -r requirements.txt
 
-# Aplicar migrações
+#### Aplicar migrações
 python manage.py migrate
 
-# Iniciar servidor
+#### Iniciar servidor
 python manage.py runserver
 # → http://127.0.0.1:8000
 
-# Em outro terminal
+### Em outro terminal
 cd ../frontend
 
 npm install
 npm start
-# → Abre automaticamente em http://localhost:3000
+#### → Abre automaticamente em http://localhost:3000
 
-🔐 Acesso ao Admin
+#   🔐 Acesso ao Admin
 
 Tipo,URL,Credenciais
 Admin Django,http://127.0.0.1:8000/admin/,janinynobrega@gmail.com
 Dashboard,http://127.0.0.1:8000/admin/dashboard/,Senha: testetecnico
 API,http://127.0.0.1:8000/api/,
 
-🛠 Decisões Técnicas
+#   🛠 Decisões Técnicas
 
 class Message(models.Model):
     user       = models.CharField(max_length=1)  # A, B ou C
@@ -78,12 +77,10 @@ class Message(models.Model):
     response   = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-🧰 Tecnologias Utilizadas
+#   🧰 Tecnologias Utilizadas
 https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white https://img.shields.io/badge/Django_REST-092E20?style=flat-square&logo=django&logoColor=white https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chart.js&logoColor=white https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white
 
-
-
-👩‍💻 Autora
+#   👩‍💻 Autora
 Janiny Nóbrega
 Desenvolvedora Fullstack | Apaixonada por Python, React e boas experiências de usuário
 🔗 LinkedIn | GitHub
