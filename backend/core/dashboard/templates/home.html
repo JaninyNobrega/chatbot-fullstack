@@ -7,42 +7,70 @@
 </head>
 <body class="bg-blue-50 min-h-screen flex items-center justify-center p-6">
 
-    <div class="max-w-2xl w-full bg-white shadow-xl rounded-2xl p-8 text-center">
+    <div class="max-w-3xl w-full bg-white shadow-xl rounded-2xl p-10 text-center">
 
         <h1 class="text-3xl font-bold text-blue-700 mb-4">
             🤖 Chatbot Fullstack
         </h1>
 
         <p class="text-gray-600 text-lg mb-6">
-            Este projeto foi desenvolvido para um teste técnco da empresa 4blue, aqui demonstro minhas habilidades em
-            <strong>Django (backend)</strong> e <strong>React (frontend)</strong>, incluindo:
+            Projeto criado para demonstrar habilidades em
+            <strong>Django (backend)</strong> e <strong>React (frontend)</strong>.
         </p>
 
-        <ul class="text-left text-gray-700 mb-6 space-y-2">
-            <li>✔️ API funcional com Django REST</li>
-            <li>✔️ Frontend integrado com React e Tailwind</li>
-            <li>✔️ Dashboard administrativo com gráficos (Chart.js)</li>
-            <li>✔️ Filtragem por usuário no histórico</li>
-            <li>✔️ Banco de dados com Django ORM</li>
+        <ul class="text-left text-gray-700 mb-8 space-y-2">
+            <li>✔️ API Django REST</li>
+            <li>✔️ Frontend React + Tailwind</li>
+            <li>✔️ Dashboard administrativo (Chart.js)</li>
+            <li>✔️ Histórico filtrado por usuário</li>
         </ul>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+        <!-- BOTÕES -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
 
+            <!-- ADMIN -->
             <a href="/admin/"
-               class="bg-blue-700 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-800 transition">
-                Acessar Admin
+               class="group bg-blue-700 hover:bg-blue-800 text-white rounded-xl shadow p-6 flex flex-col items-center transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-10 w-10 mb-3 opacity-90 group-hover:opacity-100 transition"
+                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                          d="M12 6v6l4 2" />
+                </svg>
+                <span class="font-semibold text-lg">Admin</span>
             </a>
 
-            <a href="http://localhost:3000"
-               class="bg-white text-blue-700 border border-blue-700 px-6 py-3 rounded-xl shadow hover:bg-blue-50 transition">
-                Acessar Frontend
+            <!-- DASHBOARD -->
+            <a href="/admin/dashboard/"
+               class="group bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow p-6 flex flex-col items-center transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-10 w-10 mb-3 opacity-90 group-hover:opacity-100 transition"
+                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                          d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+                <span class="font-semibold text-lg">Dashboard</span>
             </a>
+
+            <!-- FRONTEND -->
+            <a href="http://localhost:3000"
+               class="group bg-blue-500 hover:bg-blue-600 text-white rounded-xl shadow p-6 flex flex-col items-center transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-10 w-10 mb-3 opacity-90 group-hover:opacity-100 transition"
+                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"
+                          d="M3 7h18M3 12h18M3 17h18" />
+                </svg>
+                <span class="font-semibold text-lg">Frontend</span>
+            </a>
+
         </div>
 
-        <p class="text-xs text-gray-500 mt-6">
+        <p class="text-xs text-gray-500 mt-10">
             Desenvolvido por Janiny Nóbrega.
         </p>
 
     </div>
+
 </body>
 </html>

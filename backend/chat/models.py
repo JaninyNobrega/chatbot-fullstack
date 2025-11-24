@@ -4,6 +4,7 @@ class Message(models.Model):
     USER_CHOICES = (
         ('A', 'Usuário A'),
         ('B', 'Usuário B'),
+        ('C', 'Usuário C'),
     )
 
     user = models.CharField(max_length=1, choices=USER_CHOICES)
