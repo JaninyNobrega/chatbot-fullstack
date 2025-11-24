@@ -62,30 +62,40 @@ npm install
 npm start
 #### → Abre automaticamente em http://localhost:3000
 
-##   🔐 Acesso ao Admin
+## 🔐 Acesso ao Admin
 
-Tipo,URL,Credenciais
-Admin Django,http://127.0.0.1:8000/admin/,janinynobrega@gmail.com
-Dashboard,http://127.0.0.1:8000/admin/dashboard/,Senha: testetecnico
-API,http://127.0.0.1:8000/api/,
+| Tipo | URL | Credenciais |
+| --- | --- | --- |
+| Admin Django | `http://127.0.0.1:8000/admin/` | `janinynobrega@gmail.com` |
+| Dashboard | `http://127.0.0.1:8000/admin/dashboard/` | `Senha: testetecnico` |
+| API | `http://127.0.0.1:8000/api/` | — |
 
-##   🛠 Decisões Técnicas
+## 🛠 Decisões Técnicas
 
+Exemplo do modelo principal usado no projeto:
+
+```python
 class Message(models.Model):
-    user       = models.CharField(max_length=1)  # A, B ou C
-    text       = models.TextField()
-    response   = models.TextField()
+    user = models.CharField(max_length=1)  # A, B ou C
+    text = models.TextField()
+    response = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-##   🧰 Tecnologias Utilizadas
-https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white 
-https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white 
-https://img.shields.io/badge/Django_REST-092E20?style=flat-square&logo=django&logoColor=white 
-https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black 
-https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white     
-https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chart.js&logoColor=white 
-https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white
+    def __str__(self):
+        return f"{self.user}: {self.text[:20]}"
+```
 
-##   👩‍💻 Autora
+## 🧰 Tecnologias Utilizadas
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
+![Django REST](https://img.shields.io/badge/DRF-092E20?style=flat-square&logo=django&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chart.js&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+
+## 👩‍💻 Autora
+
 Janiny Nóbrega  
 Projeto desenvolvido com carinho como parte do processo seletivo da 4blue 💙
