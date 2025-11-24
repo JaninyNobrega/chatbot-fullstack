@@ -11,7 +11,7 @@ Uma aplicação completa de chatbot com respostas personalizadas por usuário (A
 
 ### 🎥 Demonstração
 
-![Demonstração do projeto](./demo.gif)
+![Demonstração do projeto](./demo.mp4)
 > *Clique na imagem para ver o vídeo completo (substitua pelo seu GIF ou link do YouTube/Loom)*
 
 ---
