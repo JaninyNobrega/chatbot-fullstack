@@ -80,83 +80,66 @@ python manage.py runserver
 #   🔐 Acesso ao admin
 
 #### Credenciais incluídas apenas para o avaliador:
-Usuário: janinynobrega@gmail.com
-Senha: testetecnico
-
+Usuário: janinynobrega@gmail.com       
+Senha: testetecnico     
 #### Painel:
-http://127.0.0.1:8000/admin/
-
-#### Dashboard
-http://127.0.0.1:8000/admin/dashboard/
-
-#### Home
-http://127.0.0.1:8000/
-
+http://127.0.0.1:8000/admin/        
+#### Dashboard      
+http://127.0.0.1:8000/admin/dashboard/      
+#### Home       
+http://127.0.0.1:8000/      
 ---
-###   🟦 Frontend (React)
-
-#### 1. Instalar dependências
-cd ../frontend
-npm install
-
-#### 2. Rodar o frontend
-npm start
-
+###   🟦 Frontend (React)       
+#### 1. Instalar dependências       
+cd ../frontend      
+npm install     
+#### 2. Rodar o frontend        
+npm start       
 ---
-#   🧠 Decisões Técnicas
-#### 📌 Modelagem (Django)
-
- O model Message contém:
-
-📋 user → identifica o usuário da conversa  
-📋 text → mensagem enviada  
-📋 response → resposta automática   
-📋 created_at → data/hora   
-📋 A modelagem foi mantida simples para refletir apenas o necessário para o desafio. Optei por armazenar como CharField para permitir usuários dinâmicos sem necessidade de tabela separada.    
-
+#   🧠 Decisões Técnicas        
+#### 📌 Modelagem (Django)      
+ O model Message contém:        
+📋 user → identifica o usuário da conversa   
+📋 text → mensagem enviada   
+📋 response → resposta automática    
+📋 created_at → data/hora     
+📋 A modelagem foi mantida simples para refletir apenas o necessário para o desafio.       
 ---
-#   📌 Lógica da API
+#   📌 Lógica da API        
+#### O endpoint /api/send/:     
+✔ Recebe o usuário e a mensagem        
+✔ Gera resposta personalizada por usuário      
+✔ Salva no banco via ORM       
+✔ Retorna JSON serializado     
+✔ O endpoint /api/history/<user>/:     
+        Filtra mensagens por usuário     
+        Retorna ordem cronológica inversa        
 
-#### O endpoint /api/send/:
+###   📌 Frontend (React)       
+#### Gerenciamento de estado:       
+✔ useState → guarda mensagens no chat   
+✔ useEffect → carrega histórico ao trocar usuário   
+✔ activeUser controla qual usuário está usando o chatbot    
 
-✔ Recebe o usuário e a mensagem
-✔ Gera resposta personalizada por usuário
-✔ Salva no banco via ORM
-✔ Retorna JSON serializado
-✔ O endpoint /api/history/<user>/:
-✔ Filtra mensagens por usuário
-✔ Retorna ordem cronológica inversa
-
-###   📌 Frontend (React)
-
-#### Gerenciamento de estado:
-
-✔ useState → guarda mensagens no chat  
-✔ useEffect → carrega histórico ao trocar usuário  
-✔ activeUser controla qual usuário está usando o chatbot   
-
-#### Navegação:
-
-✏️ React Router DOM para rotas: 
+#### Navegação:     
+✏️ React Router DOM para rotas:      
 ✔  / → Chat    
 ✔  /historico → Histórico do usuário   
 
 #### Estilização:
-
-✔ Tailwind CSS para design moderno, limpo e responsivo 
-✔ Tema baseado em tons de azul, conforme sua preferência   
+✔ Tailwind CSS para design moderno, limpo e responsivo      
+✔ Tema baseado em tons de azul, conforme sua preferência     
 
 ---
-#   ✔️ Tecnologias Utilizadas
-
+#   ✔️ Tecnologias Utilizadas       
 🔸Python 3  
 🔸Django    
-🔸Django REST Framework 
+🔸Django REST Framework  
 🔸SQLite (ambiente local)   
-🔸React 
+🔸React  
 🔸Tailwind CSS  
 🔸Chart.js  
-🔸Fetch API 
+🔸Fetch API  
 
 ---
 ##   👩‍💻 Autora
