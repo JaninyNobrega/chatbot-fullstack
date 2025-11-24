@@ -32,7 +32,7 @@ Uma aplicação completa de chatbot com respostas personalizadas por usuário (A
 - Git
 - Django 5.2+ (ou instale via pip)
 
-#### 1. Clone o repositório
+#### Clone o repositório
 git clone https://github.com/JaninyNobrega/chatbot-fullstack.git        
 acesse a pasta do backend       
 \cd chatbot-fullstack        
