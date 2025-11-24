@@ -1,147 +1,90 @@
-# 📘 Chatbot Fullstack – Teste Técnico 4blue
+# 🤖 Chatbot Fullstack Integrado  
+### Django REST Framework + React + Tailwind CSS  
+**Processo Seletivo Fullstack – 4blue**  
 
-Este projeto foi desenvolvido como parte do **processo seletivo para a vaga Fullstack na empresa 4blue**.  
-O objetivo é demonstrar experiência com **Django + Django REST Framework (backend)** e **React + Tailwind CSS (frontend)**, incluindo integração completa entre as duas aplicações, dashboard administrativo e manipulação de dados.
+<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
 
----
-
-# 🧩 Funcionalidades do Projeto
-
-### 🟦 Backend (Django)
-✔ API REST para envio de mensagens  
-✔ Armazena mensagens com ORM  
-✔ Histórico filtrado por usuário  
-✔ Respostas diferentes para cada usuário (A, B e C)  
-✔ Admin customizado (com dashboard personalizado)  
-✔ Dashboard com gráfico Chart.js  
-✔ Home institucional com links  
-✔ Permite acesso ao Admin e ao Dashboard  
-✔ Integração com frontend via CORS  
-
-### 🟦 Frontend (React + Tailwind)
-✔ Interface moderna em tons de azul  
-✔ Troca entre usuários A, B e C  
-✔ Chat funcional  
-✔ Histórico por usuário  
-✔ Botão para acessar o Admin  
-✔ Totalmente responsivo  
-✔ Tailwind configurado corretamente  
-✔ Navegação com React Router  
+Projeto desenvolvido como desafio técnico para a vaga de **Desenvolvedor(a) Fullstack** na 4blue.  
+Uma aplicação completa de chatbot com respostas personalizadas por usuário (A, B e C), dashboard administrativo customizado e interface moderna.
 
 ---
 
-# 🗂 Estrutura do Projeto
+### 🎥 Demonstração
 
-/backend
-    /core
-    /chat
-    /dashboard
-    db.sqlite3
-    manage.py
-
-/frontend
-    /src
-        /components
-        App.js
-        index.js
-    package.json
+![Demonstração do projeto](./demo.gif)
+> *Clique na imagem para ver o vídeo completo (substitua pelo seu GIF ou link do YouTube/Loom)*
 
 ---
 
-# ⚙️ Como rodar o projeto localmente
+### ✨ Funcionalidades Principais
 
-#### 🟦 1. Clonar o repositório
+| Área         | Funcionalidades |
+|--------------|------------------|
+| **Backend**  | • API REST completa<br>• Respostas personalizadas por usuário (A/B/C)<br>• Histórico filtrado<br>• Admin customizado com dashboard<br>• Gráficos interativos (Chart.js)<br>• CORS configurado |
+| **Frontend** | • Interface 100% responsiva<br>• Troca dinâmica entre usuários<br>• Chat em tempo real<br>• Design moderno em tons de azul<br>• Navegação com React Router<br>• Tailwind CSS totalmente configurado |
 
+---
+
+### 🚀 Como Executar o Projeto Localmente
+
+#### Pré-requisitos
+- Python 3.9+
+- Node.js 18+
+- Git
+
+```bash
+# 1. Clone o repositório
 git clone https://github.com/JaninyNobrega/chatbot-fullstack.git
 cd chatbot-fullstack
 
-###   🟦 Backend (Django)
-#### 2. Criar ambiente virtual
 cd backend
-python -m venv venv
 
-#### 3. Ativar ambiente virtual
-Windows:
-cd backend
+# Criar e ativar ambiente virtual
 python -m venv venv
-Mac/Linux:
+# Windows
+.\venv\Scripts\activate
+# Mac/Linux
 source venv/bin/activate
 
-#### 4. Instalar dependências
+# Instalar dependências
 pip install -r requirements.txt
 
-#### 5. Rodar migrações
+# Aplicar migrações
 python manage.py migrate
 
-#### 6. Rodar o servidor
+# Iniciar servidor
 python manage.py runserver
+# → http://127.0.0.1:8000
 
----
-#   🔐 Acesso ao admin
+# Em outro terminal
+cd ../frontend
 
-#### Credenciais incluídas apenas para o avaliador:
-Usuário: janinynobrega@gmail.com       
-Senha: testetecnico     
-#### Painel:
-http://127.0.0.1:8000/admin/        
-#### Dashboard      
-http://127.0.0.1:8000/admin/dashboard/      
-#### Home       
-http://127.0.0.1:8000/      
----
-###   🟦 Frontend (React)       
-#### 1. Instalar dependências       
-cd ../frontend      
-npm install     
-#### 2. Rodar o frontend        
-npm start       
----
-#   🧠 Decisões Técnicas        
-#### 📌 Modelagem (Django)      
- O model Message contém:        
-📋 user → identifica o usuário da conversa   
-📋 text → mensagem enviada   
-📋 response → resposta automática    
-📋 created_at → data/hora     
-📋 A modelagem foi mantida simples para refletir apenas o necessário para o desafio.       
----
-#   📌 Lógica da API        
-#### O endpoint /api/send/:     
-✔ Recebe o usuário e a mensagem        
-✔ Gera resposta personalizada por usuário      
-✔ Salva no banco via ORM       
-✔ Retorna JSON serializado     
-✔ O endpoint /api/history/<user>/:     
-        Filtra mensagens por usuário     
-        Retorna ordem cronológica inversa        
+npm install
+npm start
+# → Abre automaticamente em http://localhost:3000
 
-###   📌 Frontend (React)       
-#### Gerenciamento de estado:       
-✔ useState → guarda mensagens no chat   
-✔ useEffect → carrega histórico ao trocar usuário   
-✔ activeUser controla qual usuário está usando o chatbot    
+🔐 Acesso ao Admin
 
-#### Navegação:     
-✏️ React Router DOM para rotas:      
-✔  / → Chat    
-✔  /historico → Histórico do usuário   
+Tipo,URL,Credenciais
+Admin Django,http://127.0.0.1:8000/admin/,janinynobrega@gmail.com
+Dashboard,http://127.0.0.1:8000/admin/dashboard/,Senha: testetecnico
+API,http://127.0.0.1:8000/api/,
 
-#### Estilização:
-✔ Tailwind CSS para design moderno, limpo e responsivo      
-✔ Tema baseado em tons de azul, conforme sua preferência     
+🛠 Decisões Técnicas
 
----
-#   ✔️ Tecnologias Utilizadas       
-🔸Python 3  
-🔸Django    
-🔸Django REST Framework  
-🔸SQLite (ambiente local)   
-🔸React  
-🔸Tailwind CSS  
-🔸Chart.js  
-🔸Fetch API  
+class Message(models.Model):
+    user       = models.CharField(max_length=1)  # A, B ou C
+    text       = models.TextField()
+    response   = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
 
----
-##   👩‍💻 Autora
-#### Janiny Nóbrega 
-Projeto desenvolvido como parte do processo seletivo da 4blue.
+🧰 Tecnologias Utilizadas
+https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white https://img.shields.io/badge/Django_REST-092E20?style=flat-square&logo=django&logoColor=white https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chart.js&logoColor=white https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white
+
+
+
+👩‍💻 Autora
+Janiny Nóbrega
+Desenvolvedora Fullstack | Apaixonada por Python, React e boas experiências de usuário
+🔗 LinkedIn | GitHub
+Projeto desenvolvido com carinho como parte do processo seletivo da 4blue 💙
