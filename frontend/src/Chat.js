@@ -8,13 +8,13 @@ export default function Chat({ activeUser }) {
   const endRef = useRef(null);
 
   useEffect(() => {
-    // limpar histórico local ao trocar usuário
+    
     setMessages([]);
     setError("");
   }, [activeUser]);
 
   useEffect(() => {
-    // scroll automático para o fim
+   
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 

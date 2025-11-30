@@ -37,20 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # Apps do projeto
-    'chat',
-
-    # DRF (se já instalado)
-    'rest_framework',
-
-    # CORS (se você tiver instalado)
-    'corsheaders',
-
-    # Custom Admin
-    'core.dashboard',
     
-    # Django Import Export
+    'chat',
+    
+    'rest_framework',
+    
+    'corsheaders',
+   
+    'core.dashboard',
+       
     'import_export',
 ]
 
